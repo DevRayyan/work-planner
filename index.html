@@ -1,0 +1,585 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Workout Planner</title>
+    <style>
+        /* Apply gradient background and reset margin/padding */
+        body {
+            font-family: 'Roboto', sans-serif;
+            background: linear-gradient(135deg, #3498db, #8e44ad);
+            margin: 0;
+            padding: 0;
+            color: #fff;
+        }
+
+        /* Center the title */
+        h1 {
+            text-align: center;
+            padding-top: 40px;
+            font-size: 3em;
+            font-weight: bold;
+            color: white;
+        }
+
+        /* Center the content */
+        .container {
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            flex-direction: column;
+            padding: 20px;
+        }
+
+        /* Profile section */
+        .profile {
+            display: flex;
+            justify-content: space-between;
+            width: 100%;
+            padding: 20px;
+            font-size: 1.2em;
+            margin-top: 20px;
+        }
+
+        .profile .left,
+        .profile .right {
+            width: 48%;
+        }
+
+        .profile .left p,
+        .profile .right p {
+            margin: 5px 0;
+        }
+     
+        /* Table styles */
+        table {
+            width: 90%;
+            border-collapse: collapse;
+            border-radius: 10px;
+            overflow: hidden;
+            margin-top: 30px;
+
+        }
+
+        th,
+        td {
+            padding: 15px 30px;
+            text-align: center;
+            font-size: 1.2em;
+            font-weight: 500;
+            border-radius: 8px;
+            transition: all 0.3s ease;
+        }
+
+        th {
+            background-color: #2980b9;
+            color: white;
+            box-shadow: 0 4px 10px rgba(0, 0, 0, 0.2);
+        }
+
+        td {
+            background-color: #ecf0f1;
+            color: #2c3e50;
+            font-weight: 400;
+            box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+            margin-bottom: 20px;
+        }
+
+        td:hover {
+            background-color: #d5d8dc;
+            transform: scale(1.05);
+        }
+
+        td.sunday {
+            background-color: #e74c3c;
+            color: white;
+        }
+
+        td.sunday:hover {
+            background-color: #c0392b;
+        }
+
+        /* Add subtle hover effect to table rows */
+        tr:hover {
+            background-color: rgba(255, 255, 255, 0.2);
+        }
+
+        /* Footer section */
+        .footer {
+            text-align: center;
+            margin-top: 30px;
+            font-size: 1.1em;
+            color: white;
+            font-weight: 400;
+        }
+
+        .exercise {
+            font-size: 1.1em;
+            line-height: 1.5;
+            font-weight: 500;
+            color: #2c3e50;
+        }
+
+        .exercise span {
+            color: #2980b9;
+        }
+    </style>
+</head>
+
+<body>
+
+    <div class="container">
+        <h1>Workout Planner</h1>
+
+        <!-- Profile Information Section -->
+        <div class="profile">
+            <div class="left" style="padding-left: 90px;">
+                <p><strong>Name:</strong> Hashir Ahmed Qureshi</p>
+                <p><strong>Age:</strong> 19</p>
+                <p><strong>Weight:</strong> 77kg</p>
+                <p><strong>BMI:</strong> 19</p>
+                <p><strong>DCR:</strong> To be filled</p>
+            </div>
+            <div class="right">
+                <p><strong>Cardio:</strong> (MHR 201)</p>
+                <p><strong>Warm-up:</strong> 60-65% (120-130)</p>
+                <p><strong>Cardio:</strong> 65-70% (135-140)</p>
+                <p><strong>Cool-down:</strong> 55-60% (110-120)</p>
+            </div>
+        </div>
+
+        <table>
+            <thead>
+                <tr>
+                    <th>Days</th>
+                    <th>Muscle</th>
+                    <th>Week 1</th>
+                    <th>Week 2</th>
+                    <th>Week 3</th>
+                    <th>Week 4</th>
+                </tr>
+            </thead>
+            <tbody>
+                <!-- Chest Day -->
+                <tr>
+                    <td>Monday</td>
+                    <td>Chest</td>
+                    <td>
+                        <div class="exercise">
+                            <!-- <strong>Week 1</strong><br> -->
+                            10 mins Warm-up<br>
+                            Bench Press<br>
+                            Incline Bench Press<br>
+                            Dumbbell Press<br>
+                            Incline Dumbbell Press<br>
+                            Decline Dumbbell Press<br>
+                            Dumbbell Fly<br>
+                            Incline Dumbbell Fly<br>
+                            Butterfly<br>
+                            Decline Cable Fly<br>
+                            30 mins Cardio<br>
+                            10 mins Stretching
+                        </div>
+                    </td>
+                    <td>
+                        <div class="exercise">
+                            <!-- <strong>Week 2</strong><br> -->
+                            10 mins Warm-up<br>
+                            Dumbbell Press<br>
+                            Incline Barbell Press<br>
+                            Decline Dumbbell Press<br>
+                            Dumbbell Fly<br>
+                            Incline Dumbbell Fly<br>
+                            Pec Deck Upper Cable Fly<br>
+                            Lower Cable Fly<br>
+                            Dumbbell Pullover<br>
+                            30 mins Cardio<br>
+                            10 mins Stretching
+                        </div>
+                    </td>
+                    <td>
+                        <div class="exercise">
+                            <!-- <strong>Week 3</strong><br> -->
+                            10 mins Warm-up<br>
+                            Bench Press<br>
+                            Incline Bench Press<br>
+                            Dumbbell Press<br>
+                            Dumbbell Fly<br>
+                            Incline Dumbbell Fly<br>
+                            Decline Incline Butterfly<br>
+                            Lower Cable Fly<br>
+                            Pullover<br>
+                            30 mins Cardio<br>
+                            10 mins Stretching
+                        </div>
+                    </td>
+                    <td>
+                        <div class="exercise">
+                            <!-- <strong>Week 4</strong><br> -->
+                            10 mins Warm-up<br>
+                            Dumbbell Press<br>
+                            Decline Dumbbell Press<br>
+                            Incline Dumbbell Press<br>
+                            Incline Bench Press<br>
+                            Incline Dumbbell Fly<br>
+                            Decline Dumbbell Fly<br>
+                            Upper Cable Fly<br>
+                            Lower Cable Fly<br>
+                            Butterfly<br>
+                            30 mins Cardio<br>
+                            10 mins Stretching
+                        </div>
+                    </td>
+                </tr>
+
+                <!-- Back Day -->
+                <tr>
+                    <td>Tuesday</td>
+                    <td>Back</td>
+                    <td>
+                        <div class="exercise">
+                            <!-- <strong>Week 1</strong><br> -->
+                            10 mins Warm-up<br>
+                            Deadlift<br>
+                            Lat Pull Down (Front)<br>
+                            Lat Pull Down (Back)<br>
+                            Bent Over Row<br>
+                            Single Hand Dumbbell Row<br>
+                            Cable Rowing<br>
+                            30 mins Cardio<br>
+                            10 mins Stretching
+                        </div>
+                    </td>
+                    <td>
+                        <div class="exercise">
+                            <!-- <strong>Week 2</strong><br> -->
+                            10 mins Warm-up<br>
+                            Deadlift<br>
+                            Lat Pull Down (Front)<br>
+                            Lat Pull Down (Back)<br>
+                            Cable Rowing<br>
+                            T-Bar Row<br>
+                            Single Hand Dumbbell Row<br>
+                            30 mins Cardio<br>
+                            10 mins Stretching
+                        </div>
+                    </td>
+                    <td>
+                        <div class="exercise">
+                            <!-- <strong>Week 3</strong><br> -->
+                            10 mins Warm-up<br>
+                            Deadlift<br>
+                            Lat Pull Down (Back)<br>
+                            Front Lat Pull Down (Close Grip)<br>
+                            Cable Rowing<br>
+                            Seated Row<br>
+                            Single Hand Dumbbell Row<br>
+                            30 mins Cardio<br>
+                            10 mins Stretching
+                        </div>
+                    </td>
+                    <td>
+                        <div class="exercise">
+                            <!-- <strong>Week 4</strong><br> -->
+                            10 mins Warm-up<br>
+                            Deadlift<br>
+                            Bent Over Row<br>
+                            Single Hand Dumbbell Rows<br>
+                            Supported Dumbbell Rows<br>
+                            Front Lat Pull Down<br>
+                            Cable Rows<br>
+                            30 mins Cardio<br>
+                            10 mins Stretching
+                        </div>
+                    </td>
+                </tr>
+
+                <!-- Shoulders Day -->
+                <tr>
+                    <td>Wednesday</td>
+                    <td>Shoulders</td>
+                    <td>
+                        <div class="exercise">
+                            <!-- <strong>Week 1</strong><br> -->
+                            10 mins Warm-up<br>
+                            Dumbbell Shoulder Press<br>
+                            Front Dumbbells<br>
+                            Lateral Raises<br>
+                            Front Raises<br>
+                            Pullover Cable<br>
+                            Shrugs<br>
+                            30 mins Cardio<br>
+                            10 mins Stretching
+                        </div>
+                    </td>
+                    <td>
+                        <div class="exercise">
+                            <!-- <strong>Week 2</strong><br> -->
+                            10 mins Warm-up<br>
+                            Shoulder Press<br>
+                            Front Barbell Press<br>
+                            Front Raises<br>
+                            Arnold Press<br>
+                            Lateral Raises<br>
+                            Seated Rear Delts<br>
+                            Upright Row<br>
+                            30 mins Cardio<br>
+                            10 mins Stretching
+                        </div>
+                    </td>
+                    <td>
+                        <div class="exercise">
+                            <!-- <strong>Week 3</strong><br> -->
+                            10 mins Warm-up<br>
+                            Military Press<br>
+                            Smith Machine Front Press<br>
+                            Cable Lateral Raise<br>
+                            Cable Front Raise<br>
+                            Seated Rear Delts<br>
+                            Upright Bar Shrugs<br>
+                            30 mins Cardio<br>
+                            10 mins Stretching
+                        </div>
+                    </td>
+                    <td>
+                        <div class="exercise">
+                            <!-- <strong>Week 4</strong><br> -->
+                            10 mins Warm-up<br>
+                            Dumbbell Shoulder Press<br>
+                            Arnold Press<br>
+                            Front Dumbbell Press<br>
+                            Lateral Raises<br>
+                            Front Raises<br>
+                            Face Pullovers<br>
+                            Shrugs<br>
+                            30 mins Cardio<br>
+                            10 mins Stretching
+                        </div>
+                    </td>
+                </tr>
+
+                <!-- Biceps Day -->
+                <tr>
+                    <td>Thursday</td>
+                    <td>Biceps</td>
+                    <td>
+                        <div class="exercise">
+                            <!-- <strong>Week 1</strong><br> -->
+                            10 mins Warm-up<br>
+                            Barbell Bicep Curls<br>
+                            Preacher Curls<br>
+                            Incline Dumbbell Curls<br>
+                            Concentration Curls<br>
+                            Hammer Curls<br>
+                            30 mins Cardio<br>
+                            10 mins Stretching
+                        </div>
+                    </td>
+                    <td>
+                        <div class="exercise">
+                            <!-- <strong>Week 2</strong><br> -->
+                            10 mins Warm-up<br>
+                            EZ Bar Close Grip Bicep Curls<br>
+                            EZ Bar Wide Grip Curls<br>
+                            Spider Curls<br>
+                            Incline Dumbbell Curls<br>
+                            Hammer Curls<br>
+                            30 mins Cardio<br>
+                            10 mins Stretching
+                        </div>
+                    </td>
+                    <td>
+                        <div class="exercise">
+                            <!-- <strong>Week 3</strong><br> -->
+                            10 mins Warm-up<br>
+                            Dumbbell Curls<br>
+                            EZ Bar Curls<br>
+                            EZ Bar Reverse Curls<br>
+                            Preacher Curls<br>
+                            Concentration Curls<br>
+                            Hammer Curls<br>
+                            30 mins Cardio<br>
+                            10 mins Stretching
+                        </div>
+                    </td>
+                    <td>
+                        <div class="exercise">
+                            <!-- <strong>Week 4</strong><br> -->
+                            10 mins Warm-up<br>
+                            Barbell Curls<br>
+                            Dumbbell Curls<br>
+                            Preacher Curls<br>
+                            Cable Curls<br>
+                            Incline Dumbbell Curls<br>
+                            Hammer Curls<br>
+                            30 mins Cardio<br>
+                            10 mins Stretching
+                        </div>
+                    </td>
+                </tr>
+
+                <!-- Triceps Day -->
+                <tr>
+                    <td>Friday</td>
+                    <td>Triceps</td>
+                    <td>
+                        <div class="exercise">
+                            <!-- <strong>Week 1</strong><br> -->
+                            10 mins Warm-up<br>
+                            Single Hand Tricep Extension<br>
+                            Skull Crushers (Both Hand Dumbbell)<br>
+                            Tricep Extension<br>
+                            Barbell Tricep Press<br>
+                            Kickbacks<br>
+                            30 mins Cardio<br>
+                            10 mins Stretching
+                        </div>
+                    </td>
+                    <td>
+                        <div class="exercise">
+                            <!-- <strong>Week 2</strong><br> -->
+                            10 mins Warm-up<br>
+                            Single Hand Tricep Extension<br>
+                            Skull Crusher (Both Hand Dumbbell)<br>
+                            Rope Extension<br>
+                            Standing Skull Crusher<br>
+                            Tricep Extension<br>
+                            30 mins Cardio<br>
+                            10 mins Stretching
+                        </div>
+                    </td>
+                    <td>
+                        <div class="exercise">
+                            <!-- <strong>Week 3</strong><br> -->
+                            10 mins Warm-up<br>
+                            Single Hand Extension<br>
+                            Standing (Both Hand Dumbbell)<br>
+                            Skull Crusher<br>
+                            Tricep Rope Pull-over<br>
+                            Tricep Extension<br>
+                            30 mins Cardio<br>
+                            10 mins Stretching
+                        </div>
+                    </td>
+                    <td>
+                        <div class="exercise">
+                            <!-- <strong>Week 4</strong><br> -->
+                            10 mins Warm-up<br>
+                            Single Hand Extension<br>
+                            Skull Crusher<br>
+                            Standing Skull Crusher<br>
+                            Both Hand Dumbbell Triceps<br>
+                            Kickbacks<br>
+                            30 mins Cardio<br>
+                            10 mins Stretching
+                        </div>
+                    </td>
+                </tr>
+
+                <!-- Legs & Abs Day -->
+                <tr>
+                    <td>Saturday</td>
+                    <td>Legs & Abs</td>
+                    <td>
+                        <div class="exercise">
+                            <!-- <strong>Week 1</strong><br> -->
+                            10 mins Warm-up<br>
+                            Barbell Squat<br>
+                            Lunges<br>
+                            Barbell Stiff-leg Hamstrings<br>
+                            Sumo Squat<br>
+                            Lying Hamstring Curls<br>
+                            Leg Press<br>
+                            Leg Extension<br>
+                            Calf Raises<br>
+                            Abs: Crunches, Sit-ups, Hanging Crunches, Leg Raises<br>
+                            30 mins Cardio<br>
+                            10 mins Stretching
+                        </div>
+                    </td>
+                    <td>
+                        <div class="exercise">
+                            <!-- <strong>Week 2</strong><br> -->
+                            10 mins Warm-up<br>
+                            Barbell Squat<br>
+                            Walking Lunges<br>
+                            Romanian Deadlift<br>
+                            Hack Squat<br>
+                            Lying Hamstring Curls<br>
+                            Leg Press<br>
+                            Leg Extension<br>
+                            Weighted Calf Raises<br>
+                            Sit-ups<br>
+                            Russian Twist<br>
+                            Bicycle Crunches<br>
+                            Mountain Climbers<br>
+                            30 mins Cardio<br>
+                            10 mins Stretching
+                        </div>
+                    </td>
+                    <td>
+                        <div class="exercise">
+                            <!-- <strong>Week 3</strong><br> -->
+                            10 mins Warm-up<br>
+                            Barbell Squat<br>
+                            Standing Lunges<br>
+                            Sumo Deadlift<br>
+                            Stiff Leg Hamstrings<br>
+                            Leg Press<br>
+                            Leg Extension<br>
+                            Hack Squat<br>
+                            Lying Hamstring Curls<br>
+                            Seated Calf Raises<br>
+                            Sit-ups<br>
+                            Leg Raises<br>
+                            Mountain Climbers<br>
+                            Russian Twist<br>
+                            30 mins Cardio<br>
+                            10 mins Stretching
+                        </div>
+                    </td>
+                    <td>
+                        <div class="exercise">
+                            <!-- <strong>Week 4</strong><br> -->
+                            10 mins Warm-up<br>
+                            Barbell Squat<br>
+                            Dumbbell Squat<br>
+                            Barbell Lunges<br>
+                            Stiff Leg Hamstring<br>
+                            Romanian Deadlift<br>
+                            Sumo Squat<br>
+                            Leg Extension<br>
+                            Leg Press<br>
+                            Smith Machine Calf Raises<br>
+                            Crunches<br>
+                            Bicycle Crunches<br>
+                            Leg Raises<br>
+                            Plank<br>
+                            30 mins Cardio<br>
+                            10 mins Stretching
+                        </div>
+                    </td>
+                </tr>
+
+                <!-- Rest Day -->
+                <tr>
+                    <td class="sunday">Sunday</td>
+                    <td class="sunday">Rest Day</td>
+                    <td class="sunday">Rest Day</td>
+                    <td class="sunday">Rest Day</td>
+                    <td class="sunday">Rest Day</td>
+                    <td class="sunday">Rest Day</td>
+                </tr>
+            </tbody>
+        </table>
+    </div>
+
+    <div class="footer">
+        <p>Stay Consistent and Keep Crushing Your Goals!</p>
+    </div>
+
+</body>
+
+</html>
